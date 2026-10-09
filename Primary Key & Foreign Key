@@ -1,0 +1,11 @@
+# Ringkasan PK dan FK
+
+| Tabel | Primary Key | Foreign Key | Mengacu ke |
+| --- | --- | --- | --- |
+| PROGRAM_STUDI | Kode_prodi | - | - |
+| MAHASISWA | NIM | Kode_prodi; Kode_induk_dosen | PROGRAM_STUDI; DOSEN |
+| DOSEN | Kode_induk_dosen | Kode_prodi | PROGRAM_STUDI |
+| MATA_KULIAH | Kode_mk | Kode_prodi | PROGRAM_STUDI |
+| KELAS_KULIAH | Kode_kelas | Kode_induk_dosen; Kode_mk | DOSEN; MATA_KULIAH |
+| NILAI | NIM + Kode_induk_dosen | NIM; Kode_induk_dosen | MAHASISWA; DOSEN |
+| KRS | NIM + Kode_mk | NIM; Kode_mk | MAHASISWA; MATA_KULIAH |
