@@ -1,0 +1,29 @@
+# Dasar Teori
+
+# skema relasional
+Rancangan basis data berbentuk tabel-tabel yang saling berhubungan.
+
+Entitas → Tabel 
+Atribut → Field/Kolom 
+Identifier → Primary Key 
+Relationship → Hubungan PK-FK 
+Kardinalitas  → Menentukan lokasi FK 
+
+# primary key
+Atribut yang membedakan satu record dengan record lain secara unik. Contoh: NIS pada tabel SISWA.
+
+# foreign key
+Atribut dalam suatu tabel yang mengacu ke primary key tabel lain. Contoh: kode_kelas pada SISWA mengacu ke PK tabel KELAS.
+
+# perbedaan PK dan FK
+
+| Primary Key | Foreign Key |
+
+Identitas utama tabel → Menghubungkan dengan tabel lain 
+Nilainya unik  → Nilainya dapat berulang 
+Berasal dari identifier → Berasal dari relationship 
+Menjadi sumber referensi → Mengacu ke PK tabel lain 
+
+# aturan transformasi
+- one-to-many (1:N): PK sisi 1 menjadi FK pada tabel sisi N
+- many-to-many (M:N): dibuat tabel penghubung yang menyimpan FK dari dua tabel
