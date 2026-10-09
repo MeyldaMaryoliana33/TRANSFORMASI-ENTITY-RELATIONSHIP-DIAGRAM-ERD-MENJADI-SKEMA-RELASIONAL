@@ -1,0 +1,22 @@
+# Relasi One-to-Many
+
+# aturan
+Primary Key pada sisi 1 ditempatkan sebagai Foreign Key pada tabel sisi N.
+
+# analisis relationship
+
+| No | Sisi 1 | Sisi N | FK yang ditambahkan | Artinya |
+| --- | --- | --- | --- | --- |
+| 1 | PROGRAM_STUDI | MAHASISWA | Kode_prodi | satu prodi punya banyak mahasiswa |
+| 2 | PROGRAM_STUDI | DOSEN | Kode_prodi | satu prodi punya banyak dosen |
+| 3 | PROGRAM_STUDI | MATA_KULIAH | Kode_prodi | satu prodi menawarkan banyak mata kuliah |
+| 4 | DOSEN | MAHASISWA | Kode_induk_dosen | satu dosen (wali/pembimbing akademik) membimbing banyak mahasiswa |
+| 5 | DOSEN | KELAS_KULIAH | Kode_induk_dosen | satu dosen mengampu banyak kelas |
+| 6 | MATA_KULIAH | KELAS_KULIAH | Kode_mk | satu mata kuliah dibuka dalam banyak kelas |
+| 7 | MAHASISWA | NILAI | NIM | satu mahasiswa memperoleh banyak nilai |
+| 8 | DOSEN | NILAI | Kode_induk_dosen | satu dosen memberikan banyak nilai |
+
+# contoh
+PROGRAM_STUDI (1) ke MAHASISWA (N)
+
+PROGRAM_STUDI.Kode_prodi (PK) -> MAHASISWA.Kode_prodi (FK)
