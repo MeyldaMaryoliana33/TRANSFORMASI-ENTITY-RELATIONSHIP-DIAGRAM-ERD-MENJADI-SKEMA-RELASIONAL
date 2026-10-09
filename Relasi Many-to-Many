@@ -1,0 +1,15 @@
+# Relasi Many to Many KRS
+
+# masalah
+Satu mahasiswa mengambil banyak mata kuliah, dan satu mata kuliah diambil banyak mahasiswa (M:N).
+
+Hubungan ini tidak bisa diselesaikan dengan satu FK.
+
+# solusi
+Buat tabel penghubung KRS (Kartu Rencana Studi).
+
+KRS(NIM, Kode_mk, semester, tahun_akademik, tanggal_pengambilan)
+
+- NIM -> MAHASISWA.NIM (FK)
+- Kode_mk -> MATA_KULIAH.Kode_mk (FK)
+- Primary Key KRS = NIM + Kode_mk
