@@ -1,0 +1,20 @@
+# Transformasi Entitas Menjadi Tabel
+
+# aturan
+Entitas -> Tabel, Atribut -> Field, Identifier -> Primary Key
+
+# hasil
+
+| Tabel | Field | Primary Key |
+| --- | --- | --- |
+| PROGRAM_STUDI | Kode_prodi, nama_prodi, fakultas | Kode_prodi |
+| MAHASISWA | NIM, nama_mhs, jenis_kelamin, alamat, tanggal_lahir, tahun_angkatan | NIM |
+| DOSEN | Kode_induk_dosen, email, nama_dosen, jenis_kelamin, no_telepon | Kode_induk_dosen |
+| MATA_KULIAH | Kode_mk, nama_mk, jumlah_SKS | Kode_mk |
+| KELAS_KULIAH | Kode_kelas, nama_kelas, tahun_ajaran | Kode_kelas |
+| NILAI | nilai_tugas, nilai_uts, nilai_uas, nilai_akhir | dibentuk dari FK |
+| KRS | semester, tahun_akademik, tanggal_pengambilan | dibentuk dari FK |
+
+# catatan
+- NILAI adalah entitas yang bergantung pada entitas lain, jadi PK-nya dibentuk dari FK
+- KRS adalah tabel penghubung antara MAHASISWA dan MATA_KULIAH
